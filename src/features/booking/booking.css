@@ -1,0 +1,21 @@
+.layout { display: grid; gap: 1rem; padding-bottom: 2rem; }
+@media (min-width: 768px) { .layout--with-summary { grid-template-columns: 1fr 300px; align-items: start; }
+  .layout aside { position: sticky; top: 1rem; } }
+
+.pickers { display: grid; gap: 1.5rem; }
+@media (min-width: 768px) { .pickers { grid-template-columns: 1fr 1fr; } }
+
+.dates, .slots { display: grid; gap: .5rem; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); }
+.chip { min-height: var(--tap); border: 1px solid var(--line); border-radius: var(--radius); background: #fff;
+  font: inherit; cursor: pointer; padding: .4rem; color: var(--ink); }
+.chip:hover:not(:disabled) { border-color: var(--accent); }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.chip:disabled { background: transparent; color: var(--muted); text-decoration: line-through; cursor: not-allowed; }
+.chip small { display: block; font-size: .75rem; opacity: .8; }
+
+.actions { display: flex; justify-content: space-between; gap: .75rem; margin-top: 1.25rem; }
+.summary dl { margin: 0; } .summary dt { color: var(--muted); font-size: .85rem; margin-top: .75rem; }
+.summary dd { margin: 0; font-weight: 600; word-break: break-word; }
+.muted { color: var(--muted); }
+.banner { background: var(--accent-soft); border-radius: var(--radius); padding: 1rem; margin-bottom: 1rem; }
+.alert { color: var(--danger); margin-top: 1rem; }

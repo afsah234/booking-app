@@ -1,0 +1,29 @@
+.container { width: 100%; max-width: 960px; margin: 0 auto; padding: 0 var(--space); }
+.header { padding: 1.5rem 0 1rem; }
+.header p { color: var(--muted); margin: 0; }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem; }
+
+.btn { min-height: var(--tap); padding: 0 1.25rem; border-radius: var(--radius); border: 1px solid var(--accent);
+  background: var(--accent); color: var(--accent-ink); font: inherit; font-weight: 600; cursor: pointer; }
+.btn:hover:not(:disabled) { filter: brightness(1.08); }
+.btn:disabled { opacity: .45; cursor: not-allowed; }
+.btn--ghost { background: transparent; color: var(--accent); }
+
+.field { display: flex; flex-direction: column; gap: .35rem; margin-bottom: 1rem; }
+.field label { font-weight: 600; font-size: .95rem; }
+.field input, .field textarea { min-height: var(--tap); padding: .6rem .75rem; font: inherit; color: var(--ink);
+  border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+.field input[aria-invalid="true"], .field textarea[aria-invalid="true"] { border-color: var(--danger); }
+.field .error { color: var(--danger); font-size: .875rem; }
+.field .hint { color: var(--muted); font-size: .875rem; }
+
+.steps { display: flex; gap: .5rem; list-style: none; padding: 0; margin: 0 0 1.25rem; }
+.steps li { flex: 1; padding-top: .5rem; border-top: 4px solid var(--line); font-size: .85rem; color: var(--muted); }
+.steps li.done, .steps li.current { border-top-color: var(--accent); }
+.steps li.current { color: var(--ink); font-weight: 600; }
+.steps__compact { display: none; font-weight: 600; margin-bottom: 1rem; }
+@media (max-width: 600px) {
+  .steps { display: none; }
+  .steps__compact { display: block; }
+}

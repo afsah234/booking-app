@@ -1,0 +1,15 @@
+:root {
+  --bg: #eef3f4;
+  --surface: #ffffff;
+  --ink: #10272e;
+  --muted: #566e76;
+  --line: #cdd9dc;
+  --accent: #1f7a6d;
+  --accent-ink: #ffffff;
+  --accent-soft: #d5ebe7;
+  --danger: #b3261e;
+  --radius: 10px;
+  --space: 1rem;
+  --tap: 44px;
+  --font: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+}
